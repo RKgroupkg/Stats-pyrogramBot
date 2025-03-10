@@ -90,6 +90,7 @@ jobs:
         # Add commonly used Telegram bot environment variables
         MONGO_URI: ${{ secrets.MONGO_URI }}
         SUDO_USERID: ${{ secrets.SUDO_USERID }}
+        OWNER_USERID${{ secrets.OWNER_USERID }}
         # Add test duration as environment variable
         TEST_DURATION_MINUTES: ${{ github.event.inputs.test_duration || '5' }}
         # Add Python path
