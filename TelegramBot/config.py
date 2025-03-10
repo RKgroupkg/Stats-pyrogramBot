@@ -26,9 +26,34 @@ API_ID = int(getenv("API_ID", 0))
 API_HASH = getenv("API_HASH", "")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 
+# Helper function to handle both direct env vars and .env format
+def parse_json_env(key, default=None):
+    value = getenv(key, "")
+    if not value:
+        return default if default is not None else []
+    
+    # Clean up the value (remove extra spaces, etc.)
+    value = value.strip()
+    
+    # Check if it's already a valid JSON string
+    if (value.startswith('[') and value.endswith(']')) or \
+       (value.startswith('{') and value.endswith('}')):
+        try:
+            return json.loads(value)
+        except json.JSONDecodeError:
+            pass
+    
+    # Try to interpret as a single value
+    try:
+        # For a single integer
+        return [int(value)]
+    except ValueError:
+        # If not an integer, return as a single string item
+        return [value]
+
 # Handle owner and sudo users
 try:
-    OWNER_USERID = json.loads(getenv("OWNER_USERID", "[]"))
+    OWNER_USERID = parse_json_env("OWNER_USERID", [])
     SUDO_USERID = OWNER_USERID.copy()
 except Exception as error:
     logger.error(f"Failed to parse OWNER_USERID: {error}")
@@ -36,12 +61,10 @@ except Exception as error:
     SUDO_USERID = []
 
 try:
-    sudo_users = json.loads(getenv("SUDO_USERID", "[]"))
+    sudo_users = parse_json_env("SUDO_USERID", [])
     if sudo_users:
         SUDO_USERID += sudo_users
-        logger.info(f"Added sudo user(s)")
-    else:
-        logger.info("No sudo users found in environment variables")
+        logger.info("Added sudo user(s)")
 except Exception as error:
     logger.info("No sudo user(s) mentioned in config.")
 
