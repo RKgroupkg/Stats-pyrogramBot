@@ -21,36 +21,29 @@ for env_file in env_files:
 if not env_loaded:
     logger.info("No .env file found, using system environment variables")
 
-# Helper function to safely load JSON environment variables
-def get_json_env(key, default=None):
-    value = getenv(key)
-    if not value:
-        return default
-    
-    try:
-        return json.loads(value)
-    except json.JSONDecodeError as e:
-        logger.error(f"Failed to parse JSON from {key}: {e}")
-        return default
-
-# Load configuration with proper error handling
+# Load configuration
 API_ID = int(getenv("API_ID", 0))
 API_HASH = getenv("API_HASH", "")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 
 # Handle owner and sudo users
-OWNER_USERID = get_json_env("OWNER_USERID", [])
-SUDO_USERID = OWNER_USERID.copy()
+try:
+    OWNER_USERID = json.loads(getenv("OWNER_USERID", "[]"))
+    SUDO_USERID = OWNER_USERID.copy()
+except Exception as error:
+    logger.error(f"Failed to parse OWNER_USERID: {error}")
+    OWNER_USERID = []
+    SUDO_USERID = []
 
 try:
-    sudo_users = get_json_env("SUDO_USERID", [])
+    sudo_users = json.loads(getenv("SUDO_USERID", "[]"))
     if sudo_users:
         SUDO_USERID += sudo_users
-        logger.info(f"Added {len(sudo_users)} sudo user(s)")
+        logger.info(f"Added sudo user(s)")
     else:
         logger.info("No sudo users found in environment variables")
 except Exception as error:
-    logger.warning(f"Error processing sudo users: {error}")
+    logger.info("No sudo user(s) mentioned in config.")
 
 # Ensure unique user IDs
 SUDO_USERID = list(set(SUDO_USERID))
