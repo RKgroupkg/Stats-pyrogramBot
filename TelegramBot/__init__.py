@@ -9,6 +9,13 @@ from TelegramBot import config
 from TelegramBot.logging import LOGGER
 from TelegramBot.database.MongoDb import check_mongo_uri
 
+from keep-alive-ping import KeepAliveService
+# for render and koyeb comment it ou uf you dont need it 
+
+service = KeepAliveService(
+    ping_interval=60  # Ping every 1 minutes
+)
+
 
 uvloop.install()
 LOGGER(__name__).info("Starting TelegramBot....")
@@ -33,20 +40,12 @@ except RuntimeError:
     set_event_loop(new_event_loop())
     loop = get_event_loop()
 
+LOGGER(__name__).info("setting up pinger for keep alive ....")
 
-LOGGER(__name__).info(
-    r"""
-____________________________________________________________________
-|  _______   _                                ____        _        |
-| |__   __| | |                              |  _ \      | |       |
-|    | | ___| | ___  __ _ _ __ __ _ _ __ ___ | |_) | ___ | |_      |
-|    | |/ _ \ |/ _ \/ _` | '__/ _` | '_ ` _ \|  _ < / _ \| __|     |
-|    | |  __/ |  __/ (_| | | | (_| | | | | | | |_) | (_) | |_      |
-|    |_|\___|_|\___|\__, |_|  \__,_|_| |_| |_|____/ \___/ \__|     |
-|                    __/ |                                         |
-|__________________________________________________________________|
-"""
-)
+try:
+  service.start()
+except Exception as e:
+  raise e
 # https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
 
 
