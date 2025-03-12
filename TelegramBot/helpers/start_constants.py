@@ -1,7 +1,7 @@
 from TelegramBot.version import (__python_version__, __version__, __pyro_version__, __license__)
 
 USER_TEXT = """
-🗒️ Documentation for commands available to user's
+🗒️️ 𝙳𝚘𝚌𝚞𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗 𝚏𝚘𝚛 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚝𝚘 𝚞𝚜𝚎𝚛'𝚜
 
 • /start: To Get this message
 
@@ -15,8 +15,7 @@ USER_TEXT = """
 """
 
 SUDO_TEXT = """
-🗒️ Documentation for Sudo Users commands.
-
+🗒️ 𝙳𝚘𝚌𝚞𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗 𝚏𝚘𝚛 𝚂𝚞𝚍𝚘 𝚄𝚜𝚎𝚛𝚜 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜.
 • /speedtest: Check the internet speed of bot server.
 
 • /serverstats: Get the stats of server.
@@ -29,8 +28,7 @@ SUDO_TEXT = """
 """
 
 DEV_TEXT = """
-🗒️ Documentation for Developers Commands.
-
+🗒️𝙳𝚘𝚌𝚞𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗 𝚏𝚘𝚛 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜.
 • /update: Update the bot to latest commit from repository. 
 
 • /restart: Restart the bot.
@@ -43,14 +41,14 @@ DEV_TEXT = """
 """
 
 ABOUT_CAPTION = f"""• Python version : {__python_version__}
-• Bot version : {__version__}
-• pyrogram  version : {__pyro_version__}
-• License : {__license__}
+• 𝙱𝚘𝚝 𝚟𝚎𝚛𝚜𝚒𝚘𝚗: {__version__}
+• 𝚙𝚢𝚛𝚘𝚐𝚛𝚊𝚖  𝚟𝚎𝚛𝚜𝚒𝚘𝚗 : {__pyro_version__}
+• 𝙻𝚒𝚌𝚎𝚗𝚜𝚎 : {__license__}
 
-**Github Repo**: https://github.com/sanjit-sinha/TelegramBot-Boilerplate"""
+**Github Repo**: https://github.com/RKgroupkg/Pyrogram-Bot/"""
 
-START_ANIMATION = "https://telegra.ph/file/c0857672b427bec8542f6.mp4"
+START_ANIMATION = "https://images.app.goo.gl/hjN3cqtM43Bs95fJ6"
 
-START_CAPTION = """Hey there!! I am simple Telegram Bot which is made for the purpose for trying, testing, deploying and learning about Telegram Bot using python pyrogram framework. \n\nUse buttons to navigate and know more about me :)"""
+START_CAPTION = """𝙷𝚎𝚢 𝚝𝚑𝚎𝚛𝚎!! 𝙸 𝚊𝚖 𝚜𝚒𝚖𝚙𝚕𝚎 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙱𝚘𝚝 𝚠𝚑𝚒𝚌𝚑 𝚒𝚜 𝚖𝚊𝚍𝚎 𝚏𝚘𝚛 𝚝𝚑𝚎 𝚙𝚞𝚛𝚙𝚘𝚜𝚎 𝚏𝚘𝚛 𝚝𝚛𝚢𝚒𝚗𝚐, 𝚝𝚎𝚜𝚝𝚒𝚗𝚐, 𝚍𝚎𝚙𝚕𝚘𝚢𝚒𝚗𝚐 𝚊𝚗𝚍 𝚕𝚎𝚊𝚛𝚗𝚒𝚗𝚐 𝚊𝚋𝚘𝚞𝚝 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙱𝚘𝚝 𝚞𝚜𝚒𝚗𝚐 𝚙𝚢𝚝𝚑𝚘𝚗 𝚙𝚢𝚛𝚘𝚐𝚛𝚊𝚖 𝚏𝚛𝚊𝚖𝚎𝚠𝚘𝚛𝚔. \n\nUse buttons to navigate and know more about me :)"""
 
-COMMAND_CAPTION = """**Here are the list of commands which you can use in bot.\n**"""
+COMMAND_CAPTION = """**𝙷𝚎𝚛𝚎 𝚊𝚛𝚎 𝚝𝚑𝚎 𝚕𝚒𝚜𝚝 𝚘𝚏 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚠𝚑𝚒𝚌𝚑 𝚢𝚘𝚞 𝚌𝚊𝚗 𝚞𝚜𝚎 𝚒𝚗 𝚋𝚘𝚝.\n**"""

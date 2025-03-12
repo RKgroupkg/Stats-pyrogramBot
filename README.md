@@ -41,20 +41,12 @@ Pyrogram is a modern, elegant , much faster and asynchronous MTProto API<a href=
 <br> Some other libraries and Framework: <a href="https://github.com/python-telegram-bot/python-telegram-bot"><strong>Python Telegram Bot</strong></a> | <a href="https://github.com/LonamiWebs/Telethon"><strong>Telethon</strong></a> | <a href="https://core.telegram.org/bots/samples"><strong>List of libraries and frameworks using various type of languages.</strong></a>
 <br>
 <br>
-Join <a href="https://t.me/ani_support"><strong>Discussion Group</strong><a> if you have any suggestion or bugs to discuss.
+Join <a href="https://t.me/rkgroup_update"><strong>channel</strong><a> if you want more features and wants to be updated.
 <p>
   
 ---------
 
-<div align="center"> 
-<h1><b>Screenshots</b></h1>
-</div>
 
-| ![](https://te.legra.ph/file/565b3f47e0886fc93e75c.jpg) | ![](https://te.legra.ph/file/e6e16e6f3a1d07524a23b.jpg)|
-|--------------------------------------------------------|--------------------------------------------------------|
-| ![](https://te.legra.ph/file/29f7e8163406f63bfb4f8.jpg) | ![](https://te.legra.ph/file/c26991c1eaae34920216c.jpg) |
-
-_______
 
 <div align="center"> 
 <h1><b>Bot Deployment and Usage</b></h1>
@@ -74,7 +66,7 @@ sudo pip3 install -U pip
 Cloning Github Repository and Starting the Bot in Server.
  
 ```
-git clone https://github.com/sanjit-sinha/Telegram-Bot-Boilerplate && cd Telegram-Bot-Boilerplate 
+git clone https://github.com/RKgroupkg/Pyrogram-Bot && cd Pyrogram-Bot 
 pip3 install -U -r requirements.txt
 ```
 
@@ -114,6 +106,7 @@ Now the bot will run 24*7 even if you logout from the server. [Click here to kno
 	/help - Alias command for start. <br>
 	/ping - Ping the telegram api server<br>
 	/paste - Paste the text in katb.in
+	/id - To get info about msg
 	</li>
 <br>
 	<li>
@@ -257,7 +250,7 @@ Codes and structure of this bot is heavily inspired by open source projects like
  Special Thanks to <br>
 • <a href="https://github.com/delivrance"><strong>Dan</strong></a> for creating <a href="https://github.com/pyrogram/pyrogram"><strong>Pyrogram.</strong></a><br>
 • <a href="https://github.com/starry69"> Starry</a> for guiding and acutebot repository. <br>
-• <a href="https://github.com/annihilatorrrr">Annihilator</a> for helping me out with pyrogram stuff.
+
 
 <br>
 <br>
@@ -274,11 +267,24 @@ Any type of suggestions, pointing out bug or contribution is highly appreciated.
 <img src="https://telegra.ph/file/b5850b957f081cfe5f0a6.png" align="right" width="110">
   
 
-* copyright (C) 2023 by [Sanjit sinha](https://github.com/sanjit-sinha)
-* Licensed under the terms of the [The MIT License](https://github.com/sanjit-sinha/Telegram-Bot-Boilerplate/blob/main/LICENSE)
+* copyright (C) 2023 by [RKgroupkg](https://github.com/RKgroupkg)
+* Licensed under the terms of the [The MIT License](https://github.com/RKgroupkg/Pyrogram-Bot/blob/main/LICENSE)
 
 <div align="center">
 <img src="https://img.shields.io/badge/License-MIT-green.svg" align="center">
 </div>
+
+
+
+
+<p align="center">
+  <a href="https://t.me/rkgroup_update">
+    <img src="https://img.shields.io/static/v1?label=Join&message=Telegram%20Channel&color=blueviolet&style=for-the-badge&logo=telegram&logoColor=white" alt="Rkgroup Channel" />
+  </a>
+  <a href="https://telegram.me/Rkgroup_helpbot">
+    <img src="https://img.shields.io/static/v1?label=Join&message=Telegram%20Group&color=blueviolet&style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Group" />
+  </a>
+</p>
+
 
 -------
