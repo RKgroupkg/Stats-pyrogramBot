@@ -34,17 +34,17 @@ async def get_id_info(client: Client, message: Message):
     
     # Prepare the response in markdown format
     response = (
-        f"**Message Information**\n\n"
-        f"**Message ID:** {message_id}\n"
-        f"**Date:** `{date}`\n\n"
-        f"**User Information**\n\n"
-        f"**User ID:** {user_id}\n"
-        f"**First Name:** `{first_name}`\n"
-        f"**Last Name:** `{last_name}`\n"
-        f"**Username:** `{username}`\n\n"
-        f"**Chat Information**\n\n"
-        f"**Chat ID:** {chat_info}\n"
-        f"**Chat Type:** `{chat_type}`\n"
+        f"**𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗**\n\n"
+        f"⟢ **Message ID:** {message_id}\n"
+        f"⟢ **Date:** `{date}`\n\n"
+        f"⟢ **User Information**\n\n"
+        f"⟢ **User ID:** {user_id}\n"
+        f"⟢ **First Name:** `{first_name}`\n"
+        f"⟢ **Last Name:** `{last_name}`\n"
+        f"⟢ **Username:** `{username}`\n\n"
+        f"⟢ **Chat Information**\n\n"
+        f"⟢ **Chat ID:** {chat_info}\n"
+        f"⟢ **Chat Type:** `{chat_type}`\n"
     )
     
     # Add forwarded information if available
@@ -52,7 +52,7 @@ async def get_id_info(client: Client, message: Message):
         forward_from = target_message.forward_from
         forward_from_chat = target_message.forward_from_chat
         
-        response += "\n**Forwarded From**\n\n"
+        response += "\n**𝙵𝚘𝚛𝚠𝚊𝚛𝚍𝚎𝚍 𝙵𝚛𝚘𝚖:**\n\n"
         
         if forward_from:
             f_user_id = f"`{forward_from.id}`"
@@ -61,10 +61,10 @@ async def get_id_info(client: Client, message: Message):
             f_username = f"@{forward_from.username}" if forward_from.username else "None"
             
             response += (
-                f"**User ID:** {f_user_id}\n"
-                f"**First Name:** `{f_first_name}`\n"
-                f"**Last Name:** `{f_last_name}`\n"
-                f"**Username:** `{f_username}`\n"
+                f"⟢ **User ID:** {f_user_id}\n"
+                f"⟢ **First Name:** `{f_first_name}`\n"
+                f"⟢ **Last Name:** `{f_last_name}`\n"
+                f"⟢ **Username:** `{f_username}`\n"
             )
         
         if forward_from_chat:
@@ -73,9 +73,9 @@ async def get_id_info(client: Client, message: Message):
             f_chat_type = forward_from_chat.type
             
             response += (
-                f"**Chat ID:** {f_chat_id}\n"
-                f"**Chat Title:** `{f_chat_title}`\n"
-                f"**Chat Type:** `{f_chat_type}`\n"
+                f"⟢ **Chat ID:** {f_chat_id}\n"
+                f"⟢ **Chat Title:** `{f_chat_title}`\n"
+                f"⟢ **Chat Type:** `{f_chat_type}`\n"
             )
     
     # Add file information if message contains media
@@ -85,10 +85,10 @@ async def get_id_info(client: Client, message: Message):
         file_size = f"{target_message.document.file_size / 1024:.2f} KB" if target_message.document.file_size else "N/A"
         
         response += (
-            f"\n**File Information**\n\n"
-            f"**File ID:** {file_id}\n"
-            f"**File Name:** `{file_name}`\n"
-            f"**File Size:** `{file_size}`\n"
+            f"\n**𝙵𝚒𝚕𝚎 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗**\n\n"
+            f"⟢ **File ID:** {file_id}\n"
+            f"⟢ **File Name:** `{file_name}`\n"
+            f"⟢ **File Size:** `{file_size}`\n"
         )
     
     # Send the response with a disable_web_page_preview to avoid unwanted previews
