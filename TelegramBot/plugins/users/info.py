@@ -1,11 +1,10 @@
-from TelegramBot.helpers.decorators import ratelimiter
+from TelegramBot.helpers.filters import is_ratelimited
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.enums import ChatType
 
 
-@Client.on_message(filters.command(["id"]))
-@ratelimiter
+@Client.on_message(filters.command(["id"]) & is_ratelimited)
 async def get_id_info(client: Client, message: Message):
     """
     Plugin that provides detailed information about a message or user
