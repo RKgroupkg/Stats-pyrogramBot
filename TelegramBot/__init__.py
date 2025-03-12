@@ -9,7 +9,8 @@ from TelegramBot import config
 from TelegramBot.logging import LOGGER
 from TelegramBot.database.MongoDb import check_mongo_uri
 
-from keep-alive-ping import KeepAliveService
+from keep_alive_ping import KeepAliveService
+
 # for render and koyeb comment it ou uf you dont need it 
 
 service = KeepAliveService(
