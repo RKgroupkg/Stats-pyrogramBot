@@ -1,4 +1,6 @@
 from pyrogram import filters
+from pyrogram.enums import ParseMode
+
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
@@ -22,15 +24,18 @@ from TelegramBot.helpers.start_constants import (
 
 START_BUTTON = [
     [
-        InlineKeyboardButton("📖 Commands", callback_data="COMMAND_BUTTON"),
-        InlineKeyboardButton("👨‍💻 About me", callback_data="ABOUT_BUTTON"),
+        InlineKeyboardButton("🛠 Ext Commands", callback_data="COMMAND_BUTTON"),
+        InlineKeyboardButton("👨‍💻 About Me", callback_data="ABOUT_BUTTON"),
+      
     ],
     [
-        InlineKeyboardButton(
-            "🔭 Original Repo",
-            url="https://github.com/sanjit-sinha/TelegramBot-Boilerplate",
-        )
+      InlineKeyboardButton("📊 Check Status", callback_data="STATUS_STATE"),
     ],
+    [
+      InlineKeyboardButton("📢 Update Channel", url="https://t.me/rkgroup_update"),  
+      
+    ],
+
 ]
 
 
@@ -47,14 +52,16 @@ COMMAND_BUTTON = [
 GOBACK_1_BUTTON = [[InlineKeyboardButton("🔙 Go Back", callback_data="START_BUTTON")]]
 GOBACK_2_BUTTON = [[InlineKeyboardButton("🔙 Go Back", callback_data="COMMAND_BUTTON")]]
 
-
 @bot.on_message(filters.command(["start", "help"]) & is_ratelimited)
 async def start(_, message: Message):
     await database.save_user(message.from_user)
-    return await message.reply_text(
-        START_CAPTION, reply_markup=InlineKeyboardMarkup(START_BUTTON), quote=True
+    return await bot.send_message(
+        message.chat.id,
+        f"{START_CAPTION}",
+        reply_to_message_id=message.id,
+        reply_markup=InlineKeyboardMarkup(START_BUTTON),
+        parse_mode=ParseMode.HTML
     )
-
 
 @bot.on_callback_query(filters.regex("_BUTTON"))
 async def botCallbacks(_, CallbackQuery: CallbackQuery):

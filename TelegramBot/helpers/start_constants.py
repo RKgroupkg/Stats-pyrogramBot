@@ -44,11 +44,26 @@ ABOUT_CAPTION = f"""• Python version : {__python_version__}
 • 𝙱𝚘𝚝 𝚟𝚎𝚛𝚜𝚒𝚘𝚗: {__version__}
 • 𝚙𝚢𝚛𝚘𝚐𝚛𝚊𝚖  𝚟𝚎𝚛𝚜𝚒𝚘𝚗 : {__pyro_version__}
 • 𝙻𝚒𝚌𝚎𝚗𝚜𝚎 : {__license__}
-
-**Github Repo**: https://github.com/RKgroupkg/Pyrogram-Bot/"""
+"""
 
 START_ANIMATION = "https://images.app.goo.gl/hjN3cqtM43Bs95fJ6"
 
-START_CAPTION = """𝙷𝚎𝚢 𝚝𝚑𝚎𝚛𝚎!! 𝙸 𝚊𝚖 𝚜𝚒𝚖𝚙𝚕𝚎 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙱𝚘𝚝 𝚠𝚑𝚒𝚌𝚑 𝚒𝚜 𝚖𝚊𝚍𝚎 𝚏𝚘𝚛 𝚝𝚑𝚎 𝚙𝚞𝚛𝚙𝚘𝚜𝚎 𝚏𝚘𝚛 𝚝𝚛𝚢𝚒𝚗𝚐, 𝚝𝚎𝚜𝚝𝚒𝚗𝚐, 𝚍𝚎𝚙𝚕𝚘𝚢𝚒𝚗𝚐 𝚊𝚗𝚍 𝚕𝚎𝚊𝚛𝚗𝚒𝚗𝚐 𝚊𝚋𝚘𝚞𝚝 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙱𝚘𝚝 𝚞𝚜𝚒𝚗𝚐 𝚙𝚢𝚝𝚑𝚘𝚗 𝚙𝚢𝚛𝚘𝚐𝚛𝚊𝚖 𝚏𝚛𝚊𝚖𝚎𝚠𝚘𝚛𝚔. \n\nUse buttons to navigate and know more about me :)"""
+START_CAPTION="""
+╭──────────────────╮
+│  Bot Monitoring System       │
+╰──────────────────╯
 
-COMMAND_CAPTION = """**𝙷𝚎𝚛𝚎 𝚊𝚛𝚎 𝚝𝚑𝚎 𝚕𝚒𝚜𝚝 𝚘𝚏 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚠𝚑𝚒𝚌𝚑 𝚢𝚘𝚞 𝚌𝚊𝚗 𝚞𝚜𝚎 𝚒𝚗 𝚋𝚘𝚝.\n**"""
+◇ <i>This bot is an <b>integral part</b> of @Rkgroup_Bot, designed to <b>monitor</b> the status of other bots by <b>pinging them at regular intervals</b>. It ensures all bots remain operational and responsive.</i>
+
+━━━━━━[ ALERT ]━━━━━━━
+◇ <i>If any bot goes <b>offline</b> or becomes <b>unresponsive</b>, it will <b>detect the issue</b> and allow users to report it directly to the owner using its built-in reporting system.</i>
+
+━━━━[ MONITORING ]━━━━━
+◇ By maintaining a <b>constant watch</b>, it helps ensure the <i>stability and reliability</i> of the entire bot network•
+
+"""
+
+
+COMMAND_CAPTION= """
+Here are additional utility commands available for both admins and users.
+"""

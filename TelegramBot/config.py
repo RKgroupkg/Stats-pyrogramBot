@@ -5,7 +5,19 @@ from pathlib import Path
 from dotenv import load_dotenv
 from TelegramBot.logging import LOGGER
 
+
+from TelegramBot.bot_config import get_config_manager
+
 logger = LOGGER(__name__)
+
+
+# Initialize the configuration manager with auto-reload enabled
+# This ensures that configuration changes are automatically picked up
+config_manager = get_config_manager(
+    config_path="bot_config.json",
+    auto_reload=True,
+    reload_interval=60  # Check for config changes every minute
+)
 
 # Check for .env or config.env files
 env_files = ["config.env", ".env"]
@@ -25,7 +37,8 @@ if not env_loaded:
 API_ID = int(getenv("API_ID", 0))
 API_HASH = getenv("API_HASH", "")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
-
+CHANNEL_ID = getenv("CHANNEL_ID", "-100")
+LOG_CHANNEL = getenv("LOG_CHANNEL", None)
 # Helper function to handle both direct env vars and .env format
 def parse_json_env(key, default=None):
     value = getenv(key, "")

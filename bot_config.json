@@ -1,0 +1,28 @@
+{
+  "bot_aliases": {
+    "ExampleBot1": {
+      "url": "https://your-bot-1-url.onrender.com/alive",
+      "timeout": 30,
+      "retries": 3,
+      "auto_redeploy": true,
+      "redeploy_url": "",
+      "ping_interval": 100,
+      "redeploy_cooldown": 1800,
+      "can_people_redeploy": false,
+      "url_bot": "https://t.me/YourBot1",
+      "disabled": false
+    },
+    "ExampleBot2": {
+      "url": "https://your-bot-2-url.onrender.com/alive",
+      "timeout": 30,
+      "retries": 3,
+      "auto_redeploy": true,
+      "redeploy_url": "",
+      "ping_interval": 100,
+      "redeploy_cooldown": 1800,
+      "can_people_redeploy": false,
+      "url_bot": "https://t.me/YourBot2",
+      "disabled": false
+    }
+  }
+}
