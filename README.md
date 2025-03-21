@@ -22,7 +22,6 @@ This Telegram bot monitors your render/koyeb servers and automatically redeploys
 ## Commands
 
 - `/start` - Start the bot and get the main menu
-- `status` - Check the status of your servers via inline buttons
 - `/config` - Configure ping intervals and server endpoints (admin-only)
 
 ## Getting Started
@@ -37,7 +36,7 @@ This Telegram bot monitors your render/koyeb servers and automatically redeploys
 
 1. Clone this repository:
 ```
-git clone https://github.com/yourusername/server-monitor-bot && cd server-monitor-bot
+git clone https://github.com/RKgroupkg/Stats-pyrogramBot && cd Stats-pyrogramBot
 ```
 
 2. Install the required packages:
@@ -45,9 +44,13 @@ git clone https://github.com/yourusername/server-monitor-bot && cd server-monito
 pip3 install -U -r requirements.txt
 ```
 
-3. Edit the configuration file:
+3. Edit the configuration for bot file:
 ```
 nano config.env
+```
+4. Edit the configuration for the bots:
+```
+nano bot_config.json
 ```
 
 4. Start the bot:
@@ -66,14 +69,11 @@ BOT_TOKEN=your_bot_token
 MONGO_URI=your_mongo_uri
 OWNER_ID=your_telegram_id
 SUDO_USERS=comma_separated_ids
-RENDER_API_KEY=your_render_api_key
-KOYEB_API_KEY=your_koyeb_api_key
-PING_INTERVAL=300  # in seconds
 ```
 
 ## Deployment
 
-To run the bot 24/7, you can use tmux:
+To run the code 24/7, you can use tmux:
 
 ```
 sudo apt install tmux -y
